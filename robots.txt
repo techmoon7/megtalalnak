@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /minta/
+Sitemap: https://[DOMAIN]/sitemap.xml

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Szalon Mira – mintaoldal</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../assets/fonts/fonts.css">
+<script>if(window.self!==window.top)document.documentElement.classList.add("embed")</script>
+
+<style>
+/* Fodrászat minta: szilva + púderrózsa, Fraunces dőlt címek, árlista mint egy szalonkártya */
+:root{--plum:#3B1F2B;--plum2:#5A3244;--rose:#F4DFE3;--rose2:#FBF2F3;--ink:#2A1720;--muted:#6E5260;--line:#E8CDD3;--gold:#B98A4E;--display:'Fraunces',Georgia,serif;--body:'Source Sans 3',system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--rose2);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:20px}
+.demo{background:#000;color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.demo a{color:#F4DFE3}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-style:italic;font-size:32px;color:var(--plum)}
+nav{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+nav a{text-decoration:none;color:var(--muted)}
+.book{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--plum);color:#fff;text-decoration:none;font-weight:600}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;padding-block:48px 80px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,7vw,86px);line-height:1;margin:0 0 22px;color:var(--plum);text-wrap:balance}
+h1 em{font-style:italic;color:var(--gold)}
+.lead{font-size:21px;color:var(--muted);margin:0 0 30px;max-width:30em}
+.art{aspect-ratio:4/5;max-width:100%;border-radius:220px 220px 16px 16px;background:radial-gradient(120% 80% at 30% 20%,#E9B9C3 0,#C98799 40%,#5A3244 100%);position:relative;overflow:hidden}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.hours{display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:28px;font-size:16px;color:var(--muted)}
+.hours b{color:var(--ink)}
+section{padding-block:80px}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,5vw,54px);margin:0 0 30px;color:var(--plum)}
+h2 em{color:var(--gold)}
+.menu{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(20px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px 56px}
+.menu h3{font-family:var(--display);font-style:italic;font-weight:600;font-size:24px;margin:0 0 12px;color:var(--plum)}
+.item{display:flex;align-items:baseline;gap:8px;padding-block:9px;border-bottom:1px dotted var(--line)}
+.item span:first-child{flex:none;max-width:70%}
+.item i{flex:1;border-bottom:1px dotted #CDAFB7;transform:translateY(-4px)}
+.item b{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.note{color:var(--muted);font-size:15px;margin:18px 0 0}
+.team{background:var(--plum);color:#fff}
+.team h2{color:#fff}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.p{background:var(--plum2);border-radius:16px;padding:26px;display:grid;gap:8px}
+.p .av{width:64px;height:64px;border-radius:50%;background:linear-gradient(140deg,#E9B9C3,#B98A4E);display:grid;place-items:center;font-family:var(--display);font-size:28px;color:var(--plum)}
+.p h3{margin:0;font-family:var(--display);font-weight:600;font-size:23px}
+.p p{margin:0;color:#E6D2D8}
+.visit .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
+.card h3{font-family:var(--display);font-style:italic;margin:0 0 12px;font-size:24px;color:var(--plum)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{padding:7px 0;border-bottom:1px solid var(--rose)}
+td:last-child{text-align:right}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .wrap{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-block:24px 56px}.art{max-height:420px;aspect-ratio:auto;height:380px}nav a:not(.book){display:none}}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.embed .demo{display:none}
+.ph-img{background:#cfd6d2;overflow:hidden}
+.ph-img img{width:100%;height:100%;object-fit:cover;display:block}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal figure{margin:0;aspect-ratio:4/3;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="demo">Mintaoldal: kitalált vállalkozás, a <a href="../index.html">Megtalálnak</a> referenciamunkája.</div>
+<header><div class="wrap"><div class="logo">Szalon Mira</div><nav aria-label="Menü"><a href="#arak">Árlista</a><a href="#csapat">Csapat</a><a href="#nyitva">Nyitvatartás</a><a class="book" href="#nyitva">Időpontot kérek</a></nav></div></header>
+<section class="hero" style="padding:0">
+<div class="wrap">
+<div>
+<h1>Frizura, ami <em>reggel is</em> jól áll</h1>
+<p class="lead">Női és férfi fodrászat Biatorbágy központjában. Vágás, festés, melír és alkalmi frizura, előre egyeztetett időpontban, várakozás nélkül.</p>
+<a class="book" href="#nyitva">Időpontot kérek</a>
+<div class="hours"><span>Kedd–Péntek <b>9–19</b></span><span>Szombat <b>8–13</b></span></div>
+</div>
+<div class="art ph-img"><img src="../assets/img/pexels/pexels-7440054.jpg" alt="Fodrász munka közben a szalonban"></div>
+</div>
+</section>
+
+<section id="arak">
+<div class="wrap">
+<h2>Árlista</h2>
+<div class="menu">
+<div>
+<h3>Női</h3>
+<div class="item"><span>Mosás, vágás, szárítás</span><i></i><b>9 500 Ft</b></div>
+<div class="item"><span>Festés tőből</span><i></i><b>12 000 Ft-tól</b></div>
+<div class="item"><span>Melír, balayage</span><i></i><b>18 000 Ft-tól</b></div>
+<div class="item"><span>Alkalmi frizura</span><i></i><b>11 000 Ft-tól</b></div>
+</div>
+<div>
+<h3>Férfi és gyerek</h3>
+<div class="item"><span>Férfi hajvágás</span><i></i><b>5 500 Ft</b></div>
+<div class="item"><span>Gépi vágás</span><i></i><b>4 000 Ft</b></div>
+<div class="item"><span>Szakáll igazítás</span><i></i><b>3 000 Ft</b></div>
+<div class="item"><span>Gyerek hajvágás (10 éves korig)</span><i></i><b>4 000 Ft</b></div>
+</div>
+</div>
+<p class="note">Az árak tájékoztató jellegűek, hosszú hajnál felár lehet. Fizetés készpénzzel vagy bankkártyával.</p>
+</div>
+</section>
+
+<section style="padding-top:0">
+<div class="wrap">
+<h2>A <em>szalon</em></h2>
+<div class="gal">
+<figure class="ph-img"><img src="../assets/img/pexels/pexels-705255.jpg" alt="Világos szalonbelső fodrászszékekkel" loading="lazy"></figure>
+<figure class="ph-img"><img src="../assets/img/pexels/pexels-8218487.jpg" alt="Szalon tükrökkel és székekkel" loading="lazy"></figure>
+<figure class="ph-img"><img src="../assets/img/pexels/pexels-3993133.jpg" alt="Vendég a fodrászszékben" loading="lazy"></figure>
+</div>
+</div>
+</section>
+
+<section class="team" id="csapat">
+<div class="wrap">
+<h2>Akiknél jó kezekben vagy</h2>
+<div class="people">
+<div class="p"><div class="av" aria-hidden="true">M</div><h3>Mira</h3><p>Tulajdonos, festés és melír a kedvence.</p></div>
+<div class="p"><div class="av" aria-hidden="true">D</div><h3>Dóra</h3><p>Alkalmi és menyasszonyi frizurák.</p></div>
+<div class="p"><div class="av" aria-hidden="true">B</div><h3>Bence</h3><p>Férfi vágások, szakáll, gépi fade.</p></div>
+</div>
+</div>
+</section>
+
+<section class="visit" id="nyitva">
+<div class="wrap">
+<div class="card"><h3>Nyitvatartás</h3>
+<table><tbody>
+<tr><td>Hétfő</td><td>zárva</td></tr>
+<tr><td>Kedd–Péntek</td><td>9:00–19:00</td></tr>
+<tr><td>Szombat</td><td>8:00–13:00</td></tr>
+<tr><td>Vasárnap</td><td>zárva</td></tr>
+</tbody></table></div>
+<div class="card"><h3>Időpontkérés</h3><p style="margin:0 0 14px">Hívj vagy írj üzenetet, és visszajelzünk egy szabad időponttal.</p><p style="font-family:var(--display);font-size:30px;margin:0;color:var(--plum)">06 20 555 0123</p></div>
+<div class="card"><h3>Hol találsz?</h3><p style="margin:0">Biatorbágy, Fő utca 00.<br>Parkolni a szalon előtt lehet.</p></div>
+</div>
+</section>
+<footer><div class="wrap"><span>© 2026 Szalon Mira (kitalált vállalkozás) · Fotók: Pexels</span><span>Weboldal: <a href="../index.html">Megtalálnak</a></span></div></footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Windows rendszerfájlok
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# macOS rendszerfájlok
+.DS_Store
+._*
+
+# Ideiglenes és mentett fájlok
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+~$*
+*.log
+
+# Szerkesztők és eszközök
+.vscode/
+.idea/
+node_modules/
+_site/
