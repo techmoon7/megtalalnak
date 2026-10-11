@@ -8,7 +8,6 @@ Bármilyen tárhelyre feltölthető, vagy ingyen futtatható GitHub Pages / Netl
 ```
 index.html            főoldal
 adatvedelem.html      adatkezelési tájékoztató (minta, kitöltendő)
-minta/                3 mintaoldal kitalált vállalkozásoknak (referenciának)
 assets/css/style.css  a főoldal stílusa
 assets/fonts/         betűtípusok (saját tárhelyről, nem a Google-től)
 assets/img/           képek, ikon
@@ -48,12 +47,3 @@ Netlify-on helyette a beépített Netlify Forms is használható.
 2. Töltsd fel ennek a mappának a teljes tartalmát.
 3. Settings → Pages → Branch: `main`, mappa: `/ (root)` → Save.
 4. Saját domainhez: Settings → Pages → Custom domain, és a domain DNS-ében állítsd be a GitHub által kért rekordokat.
-
-## Fotók
-
-A mintaoldalak fotói a Pexelsről származnak (ingyenesen használhatók, üzleti célra is),
-és közvetlenül a Pexels szerveréről töltődnek be. Ha biztosra akarsz menni, töltsd le őket
-az `assets/img/` mappába, és írd át a `https://images.pexels.com/...` címeket a helyi fájlra.
-
-A főoldal "Munkáim" részében a mintaoldalak élő, kicsinyített előnézete látszik.
-Ha ez valahol nem tölt be, alatta egy képernyőkép jelenik meg helyette.
