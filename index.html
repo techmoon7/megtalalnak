@@ -244,7 +244,6 @@ megtalálnak<span class="dot">_</span></a>
 </div>
 <form class="quote corner" id="ajanlat" novalidate>
 <div class="qhead"><h3>Kérj ajánlatot</h3><p>Töltsd ki, és az üzeneted azonnal megérkezik hozzám e-mailben. Általában még aznap visszahívlak. Ha gyorsabb, WhatsAppon is elküldheted.</p></div>
-<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="field"><label for="f-nev">Neved <span class="req">*</span></label><input id="f-nev" name="nev" type="text" autocomplete="name" required></div>
 <div class="two">
 <div class="field"><label for="f-tel">Telefonszámod <span class="req">*</span></label><input id="f-tel" name="telefon" type="tel" autocomplete="tel" required placeholder="+36 …"></div>
@@ -306,7 +305,6 @@ megtalálnak<span class="dot">_</span></a>
   function say(t,cls){msg.hidden=false;msg.className='form-msg'+(cls?' '+cls:'');msg.textContent=t}
   form.addEventListener('submit',function(e){
     e.preventDefault();var f=form.elements,clean=function(v){return String(v||'').replace(/\s+/g,' ').trim()};
-    if(f._honey.value)return;
     var d={nev:clean(f.nev.value),tel:clean(f.telefon.value),email:clean(f.email.value),tip:f.tevekenyseg.value,csomag:f.csomag.value,web:clean(f.weboldal.value),uz:String(f.uzenet.value||'').trim()};
     if(!d.nev){say(T.name);f.nev.focus();return}
     if(d.tel.replace(/\D/g,'').length<6){say(T.tel);f.telefon.focus();return}
@@ -326,9 +324,9 @@ megtalálnak<span class="dot">_</span></a>
     body[T.b]=d.tip;body[T.p]=d.csomag;if(d.web)body[T.w]=d.web;body[T.m]=d.uz;body['Oldal']=page;
     sendBtn.disabled=true;sendBtn.textContent=T.sending;msg.hidden=true;
     fetch('https://formsubmit.co/ajax/contactcreativefabrication@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)})
-      .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw 0})})
+      .then(function(r){return r.json().catch(function(){return {}}).then(function(j){if(!r.ok||String(j.success)!=='true')throw (j&&j.message)||0})})
       .then(function(){form.reset();say(T.sent,'ok')})
-      .catch(function(){say(T.failed+'contactcreativefabrication@gmail.com · +36 20 667 1832','err')})
+      .catch(function(e){say((typeof e==='string'?e+' — ':'')+T.failed+'contactcreativefabrication@gmail.com · +36 20 667 1832','err')})
       .then(function(){sendBtn.disabled=false;sendBtn.textContent=sendLabel});
   });
 })();
