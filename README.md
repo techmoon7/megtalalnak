@@ -1,49 +1,27 @@
-# Megtalálnak – weboldal
+# Mapeddly – weboldal
 
-Egyszerű, statikus weboldal (HTML + CSS), nincs szükség szerverre vagy adatbázisra.
-Bármilyen tárhelyre feltölthető, vagy ingyen futtatható GitHub Pages / Netlify / Cloudflare Pages alatt.
+A https://mapeddly.com oldal forrása. Statikus weboldal (HTML + CSS), GitHub Pages-en fut, szerver és adatbázis nélkül.
 
 ## Mappák
 
 ```
-index.html            főoldal
-adatvedelem.html      adatkezelési tájékoztató (minta, kitöltendő)
-assets/css/style.css  a főoldal stílusa
-assets/fonts/         betűtípusok (saját tárhelyről, nem a Google-től)
-assets/img/           képek, ikon
+index.html            magyar főoldal
+en/                   angol oldalak (index, privacy, imprint)
+adatvedelem.html      adatkezelési tájékoztató
+impresszum.html       impresszum
+404.html              "nem található" oldal
+assets/css/style.css  stílus
+assets/fonts/         betűtípusok (saját tárhelyről)
+assets/img/           képek, ikon, megosztási kép (og-image.png)
+CNAME                 saját domain: mapeddly.com
 robots.txt, sitemap.xml
+googlee1937f476d8ef491.html   Google Search Console ellenőrzés – NE TÖRÖLD
 ```
 
-## Élesítés előtt kitöltendő
+## Ajánlatkérő űrlap
 
-Minden kitöltendő rész szögletes zárójelben van, és az oldalon sárgával ki van emelve.
-Keress rá a `[` jelre a fájlokban:
+Az űrlap a FormSubmit szolgáltatáson keresztül küld e-mailt, a WhatsApp gomb előre kitöltött üzenetet nyit.
 
-- `[ÁR]` – a három csomag ára
-- `[ÁFA-TARTALOM]`, domain/tárhely díj
-- `[IDŐTARTAM]` – mennyi idő alatt készül el
-- `[NÉV]`, `[TELEPÜLÉS]`, `[TELEFONSZÁM]`, `[E-MAIL]`
-- impresszum: `[VÁLLALKOZÓ NEVE]`, `[CÍM]`, `[ADÓSZÁM]`, `[EV-SZÁM]`
-- `[DOMAIN]` – index.html (ld+json), robots.txt, sitemap.xml
-- a telefonos linkekben (`href="tel:[TELEFONSZÁM]"`) a szám szóközök nélkül, pl. `tel:+36301234567`
+## Domain
 
-A "Megtalálnak" munkanév: használat előtt nézd meg, szabad-e a domain és nem használja-e más.
-
-A fotód helyét az index.html-ben a `portrait` rész jelöli: tegyél egy képet az `assets/img/` mappába,
-és cseréld a `<span>Ide jön a fotód</span>` részt egy `<img src="assets/img/foto.webp" alt="...">` sorra.
-
-## Ajánlatkérő űrlap bekötése
-
-Statikus oldalon az űrlapnak kell egy fogadó szolgáltatás. A legegyszerűbb a Formspree (ingyenes csomag van):
-
-1. Regisztrálj, hozz létre egy űrlapot, kapsz egy címet, pl. `https://formspree.io/f/abcd1234`.
-2. Az index.html-ben a `data-endpoint=""` részbe írd be ezt a címet.
-
-Netlify-on helyette a beépített Netlify Forms is használható.
-
-## Feltöltés GitHub Pages-re
-
-1. Hozz létre egy új repository-t a GitHubon.
-2. Töltsd fel ennek a mappának a teljes tartalmát.
-3. Settings → Pages → Branch: `main`, mappa: `/ (root)` → Save.
-4. Saját domainhez: Settings → Pages → Custom domain, és a domain DNS-ében állítsd be a GitHub által kért rekordokat.
+DNS a Websupportnál: 4 A rekord (185.199.108.153, .109, .110, .111) és `www` CNAME → techmoon7.github.io.
